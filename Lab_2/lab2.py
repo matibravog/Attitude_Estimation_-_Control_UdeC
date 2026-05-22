@@ -1,10 +1,10 @@
 # --------------------------------------------
 # Para modificar condiciones iniciales de 
 # velocidad de yaw, pitch, roll
-# en linea : 230
+# en linea : 232
 
 # Para modificar condiciones inicales de
-# torques externos en linea :   249
+# torques externos en linea :   244
 # --------------------------------------------
 
 import numpy as np
@@ -227,9 +227,9 @@ torques = np.zeros((N, 3))
 # VELOCIDAD ANGULAR INICIAL
 # ------------------------------------------------------------
 # CAMBIAR AQUI PARA:
-# roll, pitch, yaw iniciales
+# velocidades de roll, pitch, yaw iniciales
 
-w_sat[0] = np.array([0, 0, n])
+w_sat[0] = np.array([0.001, 0, n])
 
 # ============================================================
 # TORQUES EXTERNOS
@@ -238,11 +238,10 @@ w_sat[0] = np.array([0, 0, n])
 # ------------------------------------------------------------
 # EJEMPLO FUTURO:
 #
-for i in range(N):
+# for i in range(N):
 
-    if 1000 < t[i] < 1001:
-
-        torques[i] = np.array([0.01, 0, 0])
+#     if 1000 < t[i] < 1001:
+#         torques[i] = np.array([0.01, 0, 0])
 
 # ------------------------------------------------------------
 
